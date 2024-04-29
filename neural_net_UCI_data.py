@@ -12,7 +12,7 @@ def parse_line(line: str) -> Tuple[List[float], List[float]]:
         tuple of input list and output list
     """
     tokens = line.split(",")
-    out = int(tokens[0])
+    out = int(tokens[13])
     output = [0 if out == 1 else 0.5 if out == 2 else 1]
 
     inpt = [float(x) for x in tokens[1:]]
@@ -45,7 +45,7 @@ def normalize(data: List[Tuple[List[float], List[float]]]):
     return data
 
 
-with open("wine_data.txt", "r") as f:
+with open("heart_data.txt", "r") as f:
     training_data = [parse_line(line) for line in f.readlines() if len(line) > 4]
 
 # print(training_data)
