@@ -15,7 +15,7 @@ def parse_line(line: str) -> Tuple[List[float], List[float]]:
     out = int(tokens[13])
     output = [0 if out == 1 else 0.5 if out == 2 else 1]
 
-    inpt = [float(x) for x in tokens[1:]]
+    inpt = [float(x) for x in tokens[0:13]]
     return (inpt, output)
 
 
