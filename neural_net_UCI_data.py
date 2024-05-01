@@ -13,7 +13,7 @@ def parse_line(line: str) -> Tuple[List[float], List[float]]:
     """
     tokens = line.split(",")
     out = int(tokens[13])
-    output = [ ]
+    output = [.2 if out == 0 else .4 if out == 1 else .6 if out == 2 else .8 if out == 3 else 1]
     # [.2 if out == 0 else .4 if out == 1 else .6 if out == 2 else .8 if out == 3 else 1 if out == 4][0 if out == 1 else 0.5 if out == 2 else 1] 
     inpt = [float(x) for x in tokens[0:13]]
     return (inpt, output)
